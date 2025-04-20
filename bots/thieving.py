@@ -4,7 +4,7 @@ import click
 import pyautogui as pyg
 
 
-async def magic_bot(*args, **kwargs):
+async def thieving_bot(*args, **kwargs):
 
     x1, y1 = kwargs.get("primary_coordinates")
     x2, y2 = kwargs.get("secondary_coordinates")
