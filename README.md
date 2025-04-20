@@ -1,4 +1,6 @@
-# OSRS Clicker
+# OSRS Minions
+
+A Personal OSRS bot and/or helper that assists you in leveling up your in-game skills.
 
 ## Setting Up Python and Virtual Environment
 
