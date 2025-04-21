@@ -51,7 +51,7 @@ To run the bot, use the following example command:
 Use the `--track` flag to enable live coordinate tracking mode:
 
 ```bash
-python main.py <bot_type> --track
+python main.py -b <bot_type> --track
 ```
 
 <br/>
