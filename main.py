@@ -72,7 +72,7 @@ def main(
         raise ValueError(f"Invalid bot type: {bot_type}")
 
     click.secho("Press Ctrl-C to stop the program.", fg="bright_red", bold=True)
-    start_timer(ctx.params.get("wait_time", 3))
+    start_timer(ctx.params.get("wait_time"))
 
     # TODO: Implement pause instead of aborting the program
     start_abort_listener()

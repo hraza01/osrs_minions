@@ -11,6 +11,8 @@ def track_mouse():
 
 
 def start_timer(wait_time):
+    if wait_time is None:
+        wait_time = 3
     for i in range(wait_time, 0, -1):
         print(f"Starting in {i}" + " " * 5, end="\r", flush=True)
         time.sleep(1)
