@@ -56,9 +56,7 @@ def start_abort_listener():
                 and not STOP_PROGRAM
             ):
                 STOP_PROGRAM = True
-                click.secho(
-                    "\rCtrl + C detected. Stopping the bot...", fg="red", nl=False
-                )
+                print("\r\nCtrl-C detected. Stopping the bot...", flush=True)
                 return False
         except AttributeError:
             pass
