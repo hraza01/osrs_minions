@@ -29,15 +29,18 @@ async def woodcutting_bot(*args, **kwargs):
 
             for i in range(1, num_actions + 1):
                 click.secho(
-                    f"Action {i + i // 2} of {num_actions * 2}",
+                    f"\r\t\t > Performing action {i + i // 2} of {num_actions * 2}",
                     fg="bright_cyan",
+                    nl=False,
                 )
                 pyg.moveTo(x1, y1, duration=0.75)
                 pyg.click()
                 await asyncio.sleep(34)
 
                 click.secho(
-                    f"Action {i + 1 + i // 2} of {num_actions * 2}", fg="bright_cyan"
+                    f"\r\t\t > Performing action {i + 1 + i // 2} of {num_actions * 2}",
+                    fg="bright_cyan",
+                    nl=False,
                 )
                 pyg.moveTo(x2, y2, duration=0.75)
                 pyg.click()
