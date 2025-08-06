@@ -11,6 +11,18 @@ BOTS = {
     "magic": bots.magic.magic_bot,
     "woodcutting": bots.woodcutting.woodcutting_bot,
     "agility": bots.agility.agility_bot,
+    "cooking": bots.cooking.cooking_bot,
+    "crafting": bots.crafting.crafting_bot,
+    "herblore": bots.herblore.herblore_bot,
+    "ranging": bots.ranging.ranging_bot,
+    "fishing": bots.fishing.fishing_bot,
+    "fletching": bots.fletching.fletching_bot,
+    "mining": bots.mining.mining_bot,
+    "prayer": bots.prayer.prayer_bot,
+    "combat": bots.combat.combat_bot,
+    "construction": bots.construction.construction_bot,
+    "smithing": bots.smithing.smithing_bot,
+    "firemaking": bots.firemaking.firemaking_bot,
 }
 
 
@@ -26,6 +38,19 @@ BOTS = {
     type=click.Choice(BOTS.keys(), case_sensitive=False),
     help="Type of bot to run.",
     required=True,
+)
+@click.option(
+    "-r",
+    "--resolution",
+    type=click.STRING,
+    help="Screen resolution for the bot.",
+    default="2k",
+)
+@click.option(
+    "-c",
+    "--category",
+    type=click.STRING,
+    help="Bot category within skill type",
 )
 @click.option(
     "-p",

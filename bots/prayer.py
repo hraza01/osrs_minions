@@ -4,7 +4,7 @@ import click
 import pyautogui as pyg
 
 
-async def thieving_bot(*args, **kwargs):
+async def prayer_bot(*args, **kwargs):
 
     x1, y1 = kwargs.get("primary_coordinates")
     x2, y2 = kwargs.get("secondary_coordinates")
@@ -18,15 +18,13 @@ async def thieving_bot(*args, **kwargs):
                 break
 
             # bot logic
-            pyg.moveTo(x1, y1, duration=0.25)
+            pyg.moveTo(x1, y1, duration=0.02)
             pyg.click()
-            await asyncio.sleep(0.5)
+            await asyncio.sleep(0.02)
 
-            pyg.moveTo(x2, y2, duration=0.5)
-            pyg.keyDown("shift")
+            pyg.moveTo(x2, y2, duration=0.02)
             pyg.click()
-            pyg.keyUp("shift")
-            await asyncio.sleep(1)
+            await asyncio.sleep(0.02)
 
     except KeyboardInterrupt:
         click.secho("\nKeyboardInterrupt", fg="bright_white")

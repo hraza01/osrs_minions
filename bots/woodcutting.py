@@ -11,10 +11,10 @@ async def woodcutting_bot(*args, **kwargs):
 
     # TODO: Implement a way to get these coordinates dynamically
     # log_coordinates_cols = [1050, 1090, 1132, 1175] # 4k
-    log_coordinates_cols = [780, 824, 865, 907]  # 2k
+    log_coordinates_cols = [664, 707, 748, 790]  # 2k
 
     # log_coordinates_rows = [1060, 1096, 1133, 1168, 1203, 1240]
-    log_coordinates_rows = [680, 718, 754, 788, 824, 860]
+    log_coordinates_rows = [835, 872, 908, 943, 980, 1015]
 
     try:
 
@@ -35,7 +35,7 @@ async def woodcutting_bot(*args, **kwargs):
                 )
                 pyg.moveTo(x1, y1, duration=0.75)
                 pyg.click()
-                await asyncio.sleep(34)
+                await asyncio.sleep(27)
 
                 click.secho(
                     f"\r\t\t > Performing action {i + 1 + i // 2} of {num_actions * 2}",
@@ -44,7 +44,7 @@ async def woodcutting_bot(*args, **kwargs):
                 )
                 pyg.moveTo(x2, y2, duration=0.75)
                 pyg.click()
-                await asyncio.sleep(34)
+                await asyncio.sleep(26)
 
             pyg.keyDown("shift")
             for col in log_coordinates_cols:

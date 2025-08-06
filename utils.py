@@ -1,8 +1,25 @@
 import asyncio
+import random
 import time
+from pathlib import Path
 
 import click
 from pyautogui import displayMousePosition
+
+
+def get_bot_config(bot_name):
+    import json
+
+    bot_config_path = Path(__file__).parents[0] / "bot_config" / f"{bot_name}.json"
+    if not bot_config_path.exists():
+        click.secho(
+            f"Bot configuration file '{bot_name}.json' not found.",
+            fg="bright_red",
+        )
+        return None
+
+    with open(bot_config_path) as f:
+        return json.load(f)
 
 
 def track_mouse():
@@ -63,3 +80,13 @@ def get_cli_context(ctx):
             context[key] = value
 
     return context
+
+
+def generate_random_interval(start: float, end: float) -> float:
+    return round(random.uniform(start, end), 3)
+
+
+def click_caller(x, y, button, pressed):
+    if pressed:
+        click.secho(f"Mouse clicked at ({x}, {y})\n", fg="bright_cyan")
+        return False
